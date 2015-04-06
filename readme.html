@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Sortable Orders Status</title>
+
+<style type="text/css">
+<!--
+a, a:active, a:visited {
+  color: #006666;
+  text-decoration: none
+}
+a:hover {
+    color:#00CC99;
+    text-decoration: underline;
+}
+BODY, P, H1, H2, H3, H4, H5, H6, LI, TD, DD, DT {
+  font-family: Verdana, AvantGarde, Tahoma, Arial, sans-serif;
+  font-size: 10pt;
+  color: black;
+  padding: 0px;
+  margin: 20px;
+}
+H1, H2, H3, H4 {
+  font-weight: bold
+}
+h1 {
+  font-size: 20px;
+}
+h2 {
+  font-size: 16px;
+}
+ol li {
+  margin-left: 0;
+}
+.corefile {
+  color: red;
+}
+.removed {
+  text-decoration: line-through;
+}
+.added { color: blue; }
+.changed { color: green; }
+.minspacing li {
+  margin: 0;
+}
+ol li, ul li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+ul li ul {
+  padding-left: 0;
+}
+-->
+</style>
+</head>
+
+<body>
+<h1>Sortable Orders Status</h1>
+<h3>Version 1.0.0 by lat9</h3>
+<p>Support thread on the Zen Cart Forums: <a href="http://www.zen-cart.com/showthread.php?216847-Sortable-Orders-Status" target="_blank">http://www.zen-cart.com/showthread.php?216847-Sortable-Orders-Status</a></p>
+
+<hr />
+<h2>Purpose</h2>
+<p>You've defined a order-processing procedure for your store and assigned various <em>Orders Status</em> values to allow you and your staff to track where each order is in that procedure.  Whenever you add a new status value, though, it's added to the end of the list of statuses so it doesn't show in your &quot;defined&quot; work-flow order &mdash; which tends to confuse both you and your staff!</p>
+<p>This plugin modifies the <em>Localization-&gt;Orders Status</em> processing, adding a <b>Sort Order</b> value to each status entry.  The status values are now sorted within that tool, the function used to create an orders-status dropdown (used heavily in the payment modules' configuration) and in the status dropdown within the <em>Customers->Orders</em> tool &mdash;  in ascending sort-order.  Now you can control where in the list each status value lies, making that list more customizable to your site.</p>
+
+<hr />
+<h2>Installation</h2>
+<p>There are <span class="corefile">core-file overwrites</span> in this plugin; you should <strong>always</strong> backup your cart's database and files prior to making any changes.</p>
+<ol>
+  <li>Copy the files to your cart, after renaming the <b>YOUR_ADMIN</b> folder to match your Zen Cart's secret admin folder:
+  <ol class="minspacing">
+    <li><span class="corefile">/YOUR_ADMIN/orders.php</span></li>
+    <li><span class="corefile">/YOUR_ADMIN/orders_status.php</span></li>
+    <li><span class="corefile">/YOUR_ADMIN/includes/functions/general.php</span></li>
+    <li>/YOUR_ADMIN/includes/functions/extra_functions/init_orders_status_sort_order.php</li>
+    <li><span class="corefile">/YOUR_ADMIN/includes/languages/english/orders_status.php</span></li>
+  </ol></li>
+</ol>
+
+<hr />
+<h2>Un-install</h2>
+<p>Restore the four (4) core-files overwritten by this plugin and delete the one new file.</p>
+
+<h2>Version History:</h2>
+<ul>
+  <li>v1.0.0, 2015-04-06: Initial release.</li>
+</ul>
+
+</body>
+</html>
